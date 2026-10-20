@@ -218,3 +218,20 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- 食物照片 agent：絕對不能 commit ---
+# 密碼與設定（.env.example 是假值範例，可以 commit）
+.env
+.env.*
+!.env.example
+
+# DATA_DIR：照片、Excel 紀錄、每日目標設定
+# 建議 DATA_DIR 放在 repo 之外；萬一放在 repo 裡，下面這些也會擋住
+data/
+foodbot-data/
+records/
+photos/
+settings/
+*.xlsx
+*.xls
+*.xlsx.tmp
